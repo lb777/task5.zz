@@ -454,21 +454,22 @@ fieldset {
 
 input,
 label,
+input,
 select {
   display: block;
   font-family: Arial, Helvetica, Roboto, sans-serif;
   font-size: 16px; }
 
-label {
+label, input {
   font-weight: bold;
   margin-bottom: 0.375em; }
-  label.required:after {
+  label.required:after, input.required:after {
     content: "*"; }
-  label abbr {
+  label abbr, input abbr {
     display: none; }
 
 textarea,
-input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], header .call .form-call form input[type="tel"], header .call .form-call form input[type="email"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
 select[multiple=multiple] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -486,11 +487,11 @@ select[multiple=multiple] {
   padding: 0.5em 0.5em;
   width: 100%; }
   textarea:hover,
-  input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
+  input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, header .call .form-call form input[type="tel"]:hover, header .call .form-call form input[type="email"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
   select[multiple=multiple]:hover {
     border-color: #c4c4c4; }
   textarea:focus,
-  input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
+  input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, header .call .form-call form input[type="tel"]:focus, header .call .form-call form input[type="email"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
   select[multiple=multiple]:focus {
     border-color: #477DCA;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
@@ -580,5 +581,260 @@ input[type="submit"] {
  * .icon-email
  *   @include sprite($icon-email)
  */
+label, input {
+  font-weight: normal;
+  font-size: 16px; }
+
+input::-webkit-input-placeholder {
+  color: #999999; }
+input:-moz-placeholder {
+  color: #999999; }
+input::-moz-placeholder {
+  color: #999999; }
+input:-ms-input-placeholder {
+  color: #999999; }
+
+html {
+  overflow-y: auto !important; }
+
+header, nav, section, article, aside, footer {
+  display: block; }
+
+body {
+  background-color: #fff; }
+
+header {
+  background-color: #cccccc;
+  height: 82px;
+  max-width: 1824px;
+  min-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative; }
+  header .call {
+    display: none; }
+    header .call .form-call {
+      width: 675px;
+      background-color: #ffffff;
+      position: absolute;
+      top: 180px;
+      right: 50%;
+      bottom: 180px;
+      left: 50%;
+      margin-left: -337px;
+      z-index: 99999;
+      border: 4px solid #b9b9b9;
+      display: table; }
+      header .call .form-call h4 {
+        font-size: 26px;
+        font-weight: normal;
+        margin-top: 30px;
+        margin-left: 35px; }
+      header .call .form-call form {
+        margin: 33px 125px 40px; }
+        header .call .form-call form input[type="text"], header .call .form-call form input[type="tel"], header .call .form-call form input[type="email"] {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          box-shadow: none;
+          border: 1px solid #9cb800;
+          padding: 4px 7px 3px;
+          margin-bottom: 19px; }
+        header .call .form-call form input[type="text"]:focus, header .call .form-call form input[type="tel"]:focus, header .call .form-call form input[type="email"]:focus {
+          border-color: #14b80a;
+          outline: none;
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(20, 184, 10, 0.7); }
+        header .call .form-call form input[type="tel"] {
+          width: 172px; }
+        header .call .form-call form .time {
+          width: 310px;
+          margin-bottom: 28px; }
+          header .call .form-call form .time:after {
+            content: "";
+            display: table;
+            clear: both; }
+          header .call .form-call form .time .amount {
+            margin-bottom: 12px; }
+            header .call .form-call form .time .amount span {
+              color: #999999; }
+          header .call .form-call form .time #amountMin, header .call .form-call form .time #amountMax {
+            border: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: none;
+            float: left;
+            width: 50px; }
+          header .call .form-call form .time #slider-range {
+            width: 190px;
+            float: left;
+            margin-top: 2px;
+            margin-right: 10px;
+            margin-left: 5px; }
+          header .call .form-call form .time .ui-slider .ui-slider-handle {
+            height: 17px;
+            width: 17px; }
+          header .call .form-call form .time .ui-state-default, header .call .form-call form .time .ui-widget-content .ui-state-default, header .call .form-call form .time .ui-widget-header .ui-state-default {
+            background: url("../image/sprite.png") no-repeat, #398df5;
+            background-position: -21px -21px; }
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+              header .call .form-call form .time .ui-state-default, header .call .form-call form .time .ui-widget-content .ui-state-default, header .call .form-call form .time .ui-widget-header .ui-state-default {
+                background: url("../image/time-button-retina.png") no-repeat;
+                background-size: 17px 17px; } }
+          header .call .form-call form .time .ui-state-default, header .call .form-call form .time .ui-widget-content .ui-state-default, header .call .form-call form .time .ui-widget-header .ui-state-default {
+            border: none;
+            outline: none; }
+          header .call .form-call form .time .ui-slider-horizontal .ui-slider-handle {
+            top: -4px; }
+          header .call .form-call form .time .ui-slider-horizontal {
+            height: 12px; }
+        header .call .form-call form input[type="submit"] {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          font-size: 14px;
+          padding: 5px;
+          border: 1px solid #b9b9b9;
+          background: linear-gradient(to top, #237fcd, #3f99d9), #237fcd;
+          outline: none; }
+      header .call .form-call .close {
+        height: 11px;
+        width: 11px;
+        background: url("../image/sprite.png") no-repeat, #c6c6c6;
+        background-position: 0px 0px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 18px; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+          header .call .form-call .close {
+            background: url("../image/close-retina.png") no-repeat;
+            background-size: 11px 11px; } }
+    header .call .background-fon-call {
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+      background-color: #000;
+      cursor: pointer;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 9999;
+      overflow: hidden;
+      height: 100%;
+      width: 100%; }
+  header > span {
+    font-size: 18px;
+    text-decoration: underline;
+    color: #ffffff;
+    background: url("../image/sprite.png") no-repeat;
+    background-position: -48px -48px;
+    padding-left: 19px;
+    cursor: pointer;
+    float: right;
+    margin-top: 28px;
+    margin-right: 22px; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+      header > span {
+        background: url("../image/tel-retina.png") no-repeat;
+        background-size: 16px 20px; } }
+
+.section {
+  max-width: 1824px;
+  min-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%; }
+  .section .wrapper {
+    background-color: #cccccc;
+    margin: 50px 100px;
+    padding: 3%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    box-align: stretch;
+    -ms-flex-align: stretch;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+    -ms-flex-align: stretch; }
+    .section .wrapper .box {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      box-flex: 1;
+      -webkit-flex: 1;
+      -moz-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      background-color: #d0efd9;
+      padding: 20px; }
+    .section .wrapper .left {
+      overflow: hidden;
+      font-size: 12px; }
+      .section .wrapper .left div {
+        width: 464px; }
+    .section .wrapper .center {
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      font-size: 14px;
+      overflow-x: scroll; }
+      .section .wrapper .center div {
+        width: 464px; }
+
+@media only screen and (max-width: 320px) {
+  header .call .form-call {
+    width: 319px;
+    margin-left: -159px; }
+    header .call .form-call h4 {
+      margin-right: 35px;
+      font-size: 20px; }
+    header .call .form-call form {
+      margin-left: 35px !important;
+      margin-right: 35px !important; }
+      header .call .form-call form input {
+        width: 242px !important; }
+      header .call .form-call form .time {
+        width: 242px; }
+        header .call .form-call form .time input {
+          width: 50px !important;
+          margin-right: -5px !important; }
+        header .call .form-call form .time #slider-range {
+          width: 136px; } }
 
 /*# sourceMappingURL=style.css.map */

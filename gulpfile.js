@@ -12,7 +12,7 @@ gulp.task('server', function(next) {
 
 gulp.task('autoprefixer', function() {
   return gulp.src('bourbon/style.css')
-  .pipe(prefix(["last 15 version", "> 1%", "ie 8", "ie 7"]))
+  .pipe(prefix(["last 5 version", "ie 8", "ie 7"]))
   .pipe(gulp.dest('www/style/'));
 });
 
